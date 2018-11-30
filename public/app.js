@@ -26,7 +26,8 @@ var App = /** @class */ (function () {
         // Routing
         // this.app.use(this.app.router)
         this.app.use("/", MainRoutes_1.mainRoutes);
-        this.app.use("/frontR", Front_Routes_1.frontRoutes);
+        this.app.use("/rocycat_fe", Front_Routes_1.frontRoutes);
+        //this.app.use("/frontR", frontRoutes);  
     };
     return App;
 }());

@@ -28,7 +28,8 @@ class App {
     // Routing
    // this.app.use(this.app.router)
     this.app.use("/", mainRoutes);
-    this.app.use("/frontR", frontRoutes);  
+    this.app.use("/rocycat_fe", frontRoutes);
+    //this.app.use("/frontR", frontRoutes);  
   }
 }
 //tost
