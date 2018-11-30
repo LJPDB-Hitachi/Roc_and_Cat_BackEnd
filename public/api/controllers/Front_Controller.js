@@ -46,7 +46,7 @@ var FrontController = /** @class */ (function () {
             message: "GET request successful!!"
         });
     };
-    FrontController.prototype.getTaggingForm = function (req, res) {
+    FrontController.prototype.taggingFileProcess = function (req, res) {
         return __awaiter(this, void 0, void 0, function () {
             var passedRequest, finalOutput;
             return __generator(this, function (_a) {
@@ -54,7 +54,7 @@ var FrontController = /** @class */ (function () {
                     case 0:
                         passedRequest = req.body;
                         console.log("passed request: " + passedRequest);
-                        return [4 /*yield*/, axios_1.default.post(FA_Routes_1.default.getTaggingForm, passedRequest).then(function (response) {
+                        return [4 /*yield*/, axios_1.default.post(FA_Routes_1.default.taggingFileProcess, passedRequest).then(function (response) {
                                 //console.log(`response data: ${response.data}`);
                                 //console.log(response.data.explanation);
                                 return response.data;
@@ -72,7 +72,7 @@ var FrontController = /** @class */ (function () {
             });
         });
     };
-    FrontController.prototype.dataTaggingReq1 = function (req, res) {
+    FrontController.prototype.userValidation = function (req, res) {
         return __awaiter(this, void 0, void 0, function () {
             var passedRequest, finalOutput;
             return __generator(this, function (_a) {
@@ -80,7 +80,7 @@ var FrontController = /** @class */ (function () {
                     case 0:
                         passedRequest = req.body;
                         console.log("passed request: " + passedRequest);
-                        return [4 /*yield*/, axios_1.default.post(LA_Routes_1.default.dataTaggingReq1, passedRequest).then(function (response) {
+                        return [4 /*yield*/, axios_1.default.post(LA_Routes_1.default.userValidation, passedRequest).then(function (response) {
                                 //console.log(`response data: ${response.data}`);
                                 //console.log(response.data.explanation);
                                 return response.data;
@@ -98,7 +98,7 @@ var FrontController = /** @class */ (function () {
             });
         });
     };
-    FrontController.prototype.dataTaggingReq2 = function (req, res) {
+    FrontController.prototype.dataTaggingInit = function (req, res) {
         return __awaiter(this, void 0, void 0, function () {
             var passedRequest, finalOutput;
             return __generator(this, function (_a) {
@@ -106,7 +106,7 @@ var FrontController = /** @class */ (function () {
                     case 0:
                         passedRequest = req.body;
                         console.log("passed request: " + passedRequest);
-                        return [4 /*yield*/, axios_1.default.post(LA_Routes_1.default.dataTaggingReq2, passedRequest).then(function (response) {
+                        return [4 /*yield*/, axios_1.default.post(LA_Routes_1.default.dataTaggingInit, passedRequest).then(function (response) {
                                 //console.log(`response data: ${response.data}`);
                                 //console.log(response.data.explanation);
                                 return response.data;

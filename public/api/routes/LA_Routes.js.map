@@ -1,1 +1,1 @@
-{"version":3,"file":"LA_Routes.js","sourceRoot":"","sources":["../../../src/api/routes/LA_Routes.ts"],"names":[],"mappings":";;AAAA,IAAI,OAAO,GAAG;IACV,iBAAiB,EAAG,gOAAgO;IACpP,iBAAiB,EAAG,gOAAgO;IACpP,aAAa,EAAG,gOAAgO;IAChP,iBAAiB,EAAG,gOAAgO;CACvP,CAAA;AAED,kBAAe,OAAO,CAAC"}
+{"version":3,"file":"LA_Routes.js","sourceRoot":"","sources":["../../../src/api/routes/LA_Routes.ts"],"names":[],"mappings":";;AAAA,IAAI,OAAO,GAAG;IACV,gBAAgB,EAAG,gOAAgO;IACnP,iBAAiB,EAAG,gOAAgO;IACpP,aAAa,EAAG,gOAAgO;IAChP,iBAAiB,EAAG,gOAAgO;CACvP,CAAA;AAED,kBAAe,OAAO,CAAC"}

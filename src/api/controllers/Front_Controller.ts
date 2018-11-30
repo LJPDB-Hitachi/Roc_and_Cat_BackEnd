@@ -9,10 +9,10 @@ export class FrontController {
       message: "GET request successful!!"
     });
   }
-  public async getTaggingForm(req: Request, res: Response) {
+  public async taggingFileProcess(req: Request, res: Response) {
     let passedRequest: Request = req.body as Request
     console.log(`passed request: ${passedRequest}`)
-    let finalOutput =  await ax.post(FA_URLs.getTaggingForm, passedRequest).then(response => {
+    let finalOutput =  await ax.post(FA_URLs.taggingFileProcess, passedRequest).then(response => {
       //console.log(`response data: ${response.data}`);
       //console.log(response.data.explanation);
       return response.data
@@ -25,10 +25,10 @@ export class FrontController {
     res.json(finalOutput)
   }
 
-  public async dataTaggingReq1(req: Request, res: Response) {
+  public async userValidation(req: Request, res: Response) {
     let passedRequest: Request = req.body as Request
     console.log(`passed request: ${passedRequest}`)
-    let finalOutput =  await ax.post(LA_URLs.dataTaggingReq1, passedRequest).then(response => {
+    let finalOutput =  await ax.post(LA_URLs.userValidation, passedRequest).then(response => {
       //console.log(`response data: ${response.data}`);
       //console.log(response.data.explanation);
       return response.data
@@ -41,10 +41,10 @@ export class FrontController {
     res.json(finalOutput)
   }
 
-  public async dataTaggingReq2(req: Request, res: Response) {
+  public async dataTaggingInit(req: Request, res: Response) {
     let passedRequest: Request = req.body as Request
     console.log(`passed request: ${passedRequest}`)
-    let finalOutput =  await ax.post(LA_URLs.dataTaggingReq2, passedRequest).then(response => {
+    let finalOutput =  await ax.post(LA_URLs.dataTaggingInit, passedRequest).then(response => {
       //console.log(`response data: ${response.data}`);
       //console.log(response.data.explanation);
       return response.data

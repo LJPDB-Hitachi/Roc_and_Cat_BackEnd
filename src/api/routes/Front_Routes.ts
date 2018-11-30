@@ -12,20 +12,20 @@ class FrontRoutes {
     this.router.get("/testLA/", (req: express.Request, res: express.Response) =>
       frontController.testLA(req, res)
     );
-    this.router.post("/getTaggingForm/", (req: express.Request, res: express.Response) => 
-      frontController.getTaggingForm(req, res)    
+    this.router.post("/taggingFileProcess/", (req: express.Request, res: express.Response) => 
+      frontController.taggingFileProcess(req, res)    
     );
-    this.router.post("/dataTaggingReq1/", (req: express.Request, res: express.Response) =>
-      frontController.dataTaggingReq1(req, res)
+    this.router.post("/userValidation/", (req: express.Request, res: express.Response) =>
+      frontController.userValidation(req, res)
     );
-    this.router.post("/dataTaggingReq2/", (req: express.Request, res: express.Response) =>
-      frontController.dataTaggingReq1(req, res)
+    this.router.post("/dataTaggingInit/", (req: express.Request, res: express.Response) =>
+      frontController.dataTaggingInit(req, res)
     );
     this.router.post("/projectInit/", (req: express.Request, res: express.Response) =>
-      frontController.dataTaggingReq1(req, res)
+      frontController.projectInit(req, res)
     );
     this.router.post("/projectCreation/", (req: express.Request, res: express.Response) =>
-      frontController.dataTaggingReq1(req, res)
+      frontController.projectCreation(req, res)
     );
   }
 }

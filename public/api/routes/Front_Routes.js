@@ -11,20 +11,20 @@ var FrontRoutes = /** @class */ (function () {
         this.router.get("/testLA/", function (req, res) {
             return Front_Controller_1.frontController.testLA(req, res);
         });
-        this.router.post("/getTaggingForm/", function (req, res) {
-            return Front_Controller_1.frontController.getTaggingForm(req, res);
+        this.router.post("/taggingFileProcess/", function (req, res) {
+            return Front_Controller_1.frontController.taggingFileProcess(req, res);
         });
-        this.router.post("/dataTaggingReq1/", function (req, res) {
-            return Front_Controller_1.frontController.dataTaggingReq1(req, res);
+        this.router.post("/userValidation/", function (req, res) {
+            return Front_Controller_1.frontController.userValidation(req, res);
         });
-        this.router.post("/dataTaggingReq2/", function (req, res) {
-            return Front_Controller_1.frontController.dataTaggingReq1(req, res);
+        this.router.post("/dataTaggingInit/", function (req, res) {
+            return Front_Controller_1.frontController.dataTaggingInit(req, res);
         });
         this.router.post("/projectInit/", function (req, res) {
-            return Front_Controller_1.frontController.dataTaggingReq1(req, res);
+            return Front_Controller_1.frontController.projectInit(req, res);
         });
         this.router.post("/projectCreation/", function (req, res) {
-            return Front_Controller_1.frontController.dataTaggingReq1(req, res);
+            return Front_Controller_1.frontController.projectCreation(req, res);
         });
     };
     return FrontRoutes;
