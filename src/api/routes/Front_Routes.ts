@@ -29,5 +29,4 @@ class FrontRoutes {
     );
   }
 }
-
 export const frontRoutes = new FrontRoutes().router;

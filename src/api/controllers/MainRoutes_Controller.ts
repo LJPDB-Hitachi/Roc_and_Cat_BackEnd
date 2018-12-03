@@ -7,5 +7,4 @@ export class MainController {
     });
   }
 }
-
 export const mainController = new MainController();

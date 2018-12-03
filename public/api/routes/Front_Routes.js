@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var Front_Controller_1 = require("../controllers/Front_Controller");
@@ -30,4 +29,3 @@ var FrontRoutes = /** @class */ (function () {
     return FrontRoutes;
 }());
 exports.frontRoutes = new FrontRoutes().router;
-//# sourceMappingURL=Front_Routes.js.map

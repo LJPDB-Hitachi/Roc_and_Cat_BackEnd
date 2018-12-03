@@ -13,5 +13,4 @@ class MainRoutes {
     );
   }
 }
-
 export const mainRoutes = new MainRoutes().router;

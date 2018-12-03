@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var MainController = /** @class */ (function () {
     function MainController() {
@@ -12,4 +11,3 @@ var MainController = /** @class */ (function () {
 }());
 exports.MainController = MainController;
 exports.mainController = new MainController();
-//# sourceMappingURL=MainRoutes_Controller.js.map

@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var MainRoutes_Controller_1 = require("../controllers/MainRoutes_Controller");
@@ -15,4 +14,3 @@ var MainRoutes = /** @class */ (function () {
     return MainRoutes;
 }());
 exports.mainRoutes = new MainRoutes().router;
-//# sourceMappingURL=MainRoutes.js.map

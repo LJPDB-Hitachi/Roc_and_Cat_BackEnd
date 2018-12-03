@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var LA_URLs = {
     "userValidation": "https://prod-56.westeurope.logic.azure.com/workflows/414a6e21401a4e2cb593e72255a0268b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AcuCobxcLHStekXiW8ImeToJgRdOfrDv_wdcYVGsR38",
@@ -7,4 +6,3 @@ var LA_URLs = {
     "projectCreation": "https://prod-32.westeurope.logic.azure.com/workflows/ed78ef2765d043d4a61c8ecc43588bbb/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CDcPthnLKsuQbg50aoGIgfC_oPEWWGGveF_QbilbPX0"
 };
 exports.default = LA_URLs;
-//# sourceMappingURL=LA_Routes.js.map

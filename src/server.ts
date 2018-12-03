@@ -17,7 +17,6 @@ server.listen(app.get("port"), () => {
 // let http = require('http').Server(app)
 // let io = require('socket.io')(http)
 // app.set('io',io)
-
 // const server = app.listen(app.get("port"), (err) => {
 //     if (err) {
 //         return console.log(err);

@@ -5,7 +5,6 @@ import { mainRoutes } from "./api/routes/MainRoutes";
 import { frontRoutes } from "./api/routes/Front_Routes";
 //const router = express.Router();
 
-
 class App {
   public app: express.Application;
  // public http: http.Server;
@@ -20,6 +19,7 @@ class App {
  //   this.app.set("io",io);
     // support application/json
     this.app.use(bodyParser.json());
+    this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.set('port', process.env.PORT || 3000);
     //support application/x-www-form-urlencoded post data
     this.app.use(bodyParser.urlencoded({ extended: true }));

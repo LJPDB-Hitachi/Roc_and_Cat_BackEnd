@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -37,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var LA_Routes_1 = require("../routes/LA_Routes");
 var FA_Routes_1 = require("../routes/FA_Routes");
+//import * as request from "request";
 var axios_1 = require("axios");
 var FrontController = /** @class */ (function () {
     function FrontController() {
@@ -52,20 +52,27 @@ var FrontController = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        passedRequest = req.body;
-                        console.log("passed request: " + passedRequest);
+                        passedRequest = JSON.stringify(req.body);
                         return [4 /*yield*/, axios_1.default.post(FA_Routes_1.default.taggingFileProcess, passedRequest).then(function (response) {
                                 //console.log(`response data: ${response.data}`);
                                 //console.log(response.data.explanation);
                                 return response.data;
                             })
                                 .catch(function (error) {
-                                //console.log(`error: ${error}`);
-                                return error;
+                                if (error.response) {
+                                    switch (error.response.status) {
+                                        case 409:
+                                            return error.response.data;
+                                            break;
+                                        default:
+                                            return { "error": "something went wrong." };
+                                    }
+                                }
                             })];
                     case 1:
                         finalOutput = _a.sent();
-                        console.log("await completed: " + finalOutput);
+                        console.log("await completed:");
+                        console.dir(finalOutput, { depth: null, colors: true });
                         res.json(finalOutput);
                         return [2 /*return*/];
                 }
@@ -86,12 +93,20 @@ var FrontController = /** @class */ (function () {
                                 return response.data;
                             })
                                 .catch(function (error) {
-                                //console.log(`error: ${error}`);
-                                return error;
+                                if (error.response) {
+                                    switch (error.response.status) {
+                                        case 409:
+                                            return error.response.data;
+                                            break;
+                                        default:
+                                            return { "error": "something went wrong." };
+                                    }
+                                }
                             })];
                     case 1:
                         finalOutput = _a.sent();
-                        console.log("await completed: " + finalOutput);
+                        console.log("await completed:");
+                        console.dir(finalOutput, { depth: null, colors: true });
                         res.json(finalOutput);
                         return [2 /*return*/];
                 }
@@ -112,12 +127,20 @@ var FrontController = /** @class */ (function () {
                                 return response.data;
                             })
                                 .catch(function (error) {
-                                //console.log(`error: ${error}`);
-                                return error;
+                                if (error.response) {
+                                    switch (error.response.status) {
+                                        case 409:
+                                            return error.response.data;
+                                            break;
+                                        default:
+                                            return { "error": "something went wrong." };
+                                    }
+                                }
                             })];
                     case 1:
                         finalOutput = _a.sent();
-                        console.log("await completed: " + finalOutput);
+                        console.log("await completed:");
+                        console.dir(finalOutput, { depth: null, colors: true });
                         res.json(finalOutput);
                         return [2 /*return*/];
                 }
@@ -138,12 +161,20 @@ var FrontController = /** @class */ (function () {
                                 return response.data;
                             })
                                 .catch(function (error) {
-                                //console.log(`error: ${error}`);
-                                return error;
+                                if (error.response) {
+                                    switch (error.response.status) {
+                                        case 409:
+                                            return error.response.data;
+                                            break;
+                                        default:
+                                            return { "error": "something went wrong." };
+                                    }
+                                }
                             })];
                     case 1:
                         finalOutput = _a.sent();
-                        console.log("await completed: " + finalOutput);
+                        console.log("await completed:");
+                        console.dir(finalOutput, { depth: null, colors: true });
                         res.json(finalOutput);
                         return [2 /*return*/];
                 }
@@ -158,18 +189,33 @@ var FrontController = /** @class */ (function () {
                     case 0:
                         passedRequest = req.body;
                         console.log("passed request: " + passedRequest);
+                        console.log(LA_Routes_1.default.projectCreation);
                         return [4 /*yield*/, axios_1.default.post(LA_Routes_1.default.projectCreation, passedRequest).then(function (response) {
-                                //console.log(`response data: ${response.data}`);
+                                console.log("response data: " + response.data);
                                 //console.log(response.data.explanation);
                                 return response.data;
                             })
                                 .catch(function (error) {
-                                //console.log(`error: ${error}`);
-                                return error;
+                                if (error.response) {
+                                    switch (error.response.status) {
+                                        case 409:
+                                            return error.response.data;
+                                            break;
+                                        default:
+                                            return { "error": "something went wrong." };
+                                    }
+                                    //console.log(error.response.data);
+                                    //console.log(error.response.status);
+                                    //console.log(error.response.headers);
+                                }
+                                // console.log(`Status code-----> ${error.response}`)
+                                // console.log(`error: ${error}`);
+                                //return error
                             })];
                     case 1:
                         finalOutput = _a.sent();
-                        console.log("await completed: " + finalOutput);
+                        console.log("await completed:");
+                        console.dir(finalOutput, { depth: null, colors: true });
                         res.json(finalOutput);
                         return [2 /*return*/];
                 }
@@ -180,4 +226,3 @@ var FrontController = /** @class */ (function () {
 }());
 exports.FrontController = FrontController;
 exports.frontController = new FrontController();
-//# sourceMappingURL=Front_Controller.js.map

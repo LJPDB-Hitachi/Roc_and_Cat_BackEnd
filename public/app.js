@@ -1,4 +1,3 @@
-"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -18,6 +17,7 @@ var App = /** @class */ (function () {
         //   this.app.set("io",io);
         // support application/json
         this.app.use(bodyParser.json());
+        this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.set('port', process.env.PORT || 3000);
         //support application/x-www-form-urlencoded post data
         this.app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,4 +33,3 @@ var App = /** @class */ (function () {
 }());
 //tost
 exports.default = new App().app;
-//# sourceMappingURL=app.js.map
