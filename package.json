@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/LJPDB-Hitachi/Roc_and_Cat_BackEnd#readme",
   "dependencies": {
+    "@types/node": "^10.12.11",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",

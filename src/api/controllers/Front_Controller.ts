@@ -140,6 +140,32 @@ export class FrontController {
     console.dir(finalOutput, {depth: null, colors: true}) 
     res.json(finalOutput)
   }
+
+  public async getTaggingComments(req: Request, res: Response) {
+    let passedRequest: Request = req.body as Request
+    console.log(`passed request: ${passedRequest}`)
+    let finalOutput =  await ax.post(LA_URLs.getTaggingComments, passedRequest).then(response => {
+      //console.log(`response data: ${response.data}`);
+      //console.log(response.data.explanation);
+      return response.data
+    })
+    .catch(error => {
+      if (error.response) {
+        switch(error.response.status){
+          case 409:
+            return error.response.data
+            break;
+          default:
+            return {"error":"something went wrong."}
+        }
+      }
+    });
+    console.log(`await completed:` );
+    console.dir(finalOutput, {depth: null, colors: true}) 
+    res.json(finalOutput)
+    //res.json("{\"test\":\"test\"}")
+  }
+
 }
 
 export const frontController = new FrontController();

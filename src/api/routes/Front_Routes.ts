@@ -27,6 +27,9 @@ class FrontRoutes {
     this.router.post("/projectCreation/", (req: express.Request, res: express.Response) =>
       frontController.projectCreation(req, res)
     );
+    this.router.post("/getTaggingComments/", (req: express.Request, res: express.Response) =>
+      frontController.getTaggingComments(req, res)
+    );
   }
 }
 export const frontRoutes = new FrontRoutes().router;

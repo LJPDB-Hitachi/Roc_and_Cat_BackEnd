@@ -222,6 +222,40 @@ var FrontController = /** @class */ (function () {
             });
         });
     };
+    FrontController.prototype.getTaggingComments = function (req, res) {
+        return __awaiter(this, void 0, void 0, function () {
+            var passedRequest, finalOutput;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        passedRequest = req.body;
+                        console.log("passed request: " + passedRequest);
+                        return [4 /*yield*/, axios_1.default.post(LA_Routes_1.default.getTaggingComments, passedRequest).then(function (response) {
+                                //console.log(`response data: ${response.data}`);
+                                //console.log(response.data.explanation);
+                                return response.data;
+                            })
+                                .catch(function (error) {
+                                if (error.response) {
+                                    switch (error.response.status) {
+                                        case 409:
+                                            return error.response.data;
+                                            break;
+                                        default:
+                                            return { "error": "something went wrong." };
+                                    }
+                                }
+                            })];
+                    case 1:
+                        finalOutput = _a.sent();
+                        console.log("await completed:");
+                        console.dir(finalOutput, { depth: null, colors: true });
+                        res.json(finalOutput);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
     return FrontController;
 }());
 exports.FrontController = FrontController;

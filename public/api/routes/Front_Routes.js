@@ -25,6 +25,9 @@ var FrontRoutes = /** @class */ (function () {
         this.router.post("/projectCreation/", function (req, res) {
             return Front_Controller_1.frontController.projectCreation(req, res);
         });
+        this.router.post("/getTaggingComments/", function (req, res) {
+            return Front_Controller_1.frontController.getTaggingComments(req, res);
+        });
     };
     return FrontRoutes;
 }());
