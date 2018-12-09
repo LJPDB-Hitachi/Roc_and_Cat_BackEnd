@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 //import * as io from "socket.io"; 
 var MainRoutes_1 = require("./api/routes/MainRoutes");
 var Front_Routes_1 = require("./api/routes/Front_Routes");
+var RockBrowser_Routes_1 = require("./api/routes/RockBrowser_Routes");
 //const router = express.Router();
 var App = /** @class */ (function () {
     // public http: http.Server;
@@ -27,6 +28,7 @@ var App = /** @class */ (function () {
         // this.app.use(this.app.router)
         this.app.use("/", MainRoutes_1.mainRoutes);
         this.app.use("/rocycat_fe", Front_Routes_1.frontRoutes);
+        this.app.use("/rocycat_browser", RockBrowser_Routes_1.rockBrowserRoutes);
         //this.app.use("/frontR", frontRoutes);  
     };
     return App;

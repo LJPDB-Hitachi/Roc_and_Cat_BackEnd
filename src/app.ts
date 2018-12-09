@@ -3,6 +3,7 @@ import * as bodyParser from "body-parser";
 //import * as io from "socket.io"; 
 import { mainRoutes } from "./api/routes/MainRoutes";
 import { frontRoutes } from "./api/routes/Front_Routes";
+import { rockBrowserRoutes } from "./api/routes/RockBrowser_Routes";
 //const router = express.Router();
 
 class App {
@@ -29,6 +30,7 @@ class App {
    // this.app.use(this.app.router)
     this.app.use("/", mainRoutes);
     this.app.use("/rocycat_fe", frontRoutes);
+    this.app.use("/rocycat_browser", rockBrowserRoutes);
     //this.app.use("/frontR", frontRoutes);  
   }
 }
